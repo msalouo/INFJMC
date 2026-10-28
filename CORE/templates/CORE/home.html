@@ -6,12 +6,24 @@
     <title>INFJMC</title>
 </head>
 <body>
+
+    {% extends 'CORE/base.html' %}
+
+    {% block titulo %}Inicio | INFJMC{% endblock %}
+
+    {% block contenido %}
+
+    <div ></div>
+
     <h1>Bienvenido a INFJMC</h1>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum accusantium voluptatem harum veniam aliquam repudiandae eaque neque dignissimos, ut labore deleniti officia quam. Obcaecati culpa vitae error inventore cupiditate!</p>
+    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci rerum accusantium voluptatem harum veniam aliquam repudiandae eaque neque dignissimos, ut labore deleniti officia quam. Obcaecati culpa vitae error inventore cupiditate!
+    </p>
 
     <a href= "{% url 'carreras' %}"> Nuestras Carreras</a>
     <a href= "{% url 'docentes' %}"> Nuestros Docentes</a>
+
+    {% endblock %}
 
 </body>
 </html>

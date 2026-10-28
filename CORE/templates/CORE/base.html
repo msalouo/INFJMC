@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block titulo %}INFJMC{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'CORE/css/bootstrap.min.css'%}">
+
+    <link rel="stylesheet" href="{% static 'CORE/css/estilo.css'%}">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-infjmc">
+
+        <a class="navbar-brand" href="{% url 'home' %}">
+            INFJMC
+        </a>
+
+        <button class="navbar-toggler" type="button" 
+        data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav">
+                <li class="nav-item"> <a class="nav-link" href="{% url 'home' %}"> INCIO</a>
+                </li>
+
+                <li class="nav-item"> <a class="nav-link" href="{% url 'carreras' %}"> CARRERAS</a>
+                </li>
+
+                <li class="nav-item"> <a class="nav-link" href="{% url 'docentes' %}"> DOCENTES</a>
+                </li>
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <main>
+        {% block contenido %}
+        {% endblock %}
+    </main>
+
+    <script src="{% static 'CORE/js/bootstrap.bundle.min.js' %}"></script>
+    
+</body>
+</html>

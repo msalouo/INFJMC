@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docentes</title>
+</head>
+<body>
+
+     {% extends 'CORE/base.html' %}
+
+    {% block titulo %}Inicio | INFJMC{% endblock %}
+
+    {% block contenido %}
+
+    <h1>Nuestros Docentes</h1>
+
+    <p>
+        <ul>
+            {% for docente in docentes %}
+            <li> {{ docente }} </li>
+            {% endfor %}
+        </ul>
+    </p>
+    {% endblock %}
+</body>
+</html>
